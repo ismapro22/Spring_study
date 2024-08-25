@@ -33,17 +33,17 @@ public class HelloController {
     public Hello helloApi(@RequestParam("name") String name){
         Hello hello = new Hello();
         hello.setName(name);
-        return hello;
+        return hello;//json으로 나가게 됨
     }
 
     static class Hello {
         private String name;
 
-        public String getName(){
+        public String getName() {
             return name;
         }
 
-        public void setName(String name){
+        public void setName(String name) {
             this.name = name;
         }
     }
