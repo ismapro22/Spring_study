@@ -8,15 +8,25 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+//@Service //자바코드로 직접 빈 등록하여 주석 처리
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    @Autowired
+//    @Autowired private MemberRepository memberRepository; //필드주입
+
+//    @Autowired //자바코드로 직접 빈 등록하여 주석 처리
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
-    }
+    }//생성자 주입
+
+//setter는 호출에 열려있다는 단점이 존재함
+//    private MemberRepository memberRepository;
+//    @Autowired
+//    public void setMemberRepository(MemberRepository memberRepository) {
+//        this.memberRepository = memberRepository;
+//    }
+
 
     //회원 가입
     public Long join(Member member) {
