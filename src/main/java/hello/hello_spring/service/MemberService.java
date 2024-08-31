@@ -4,11 +4,14 @@ import hello.hello_spring.domain.Member;
 import hello.hello_spring.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 //@Service //자바코드로 직접 빈 등록하여 주석 처리
+@Transactional //JPA를 통한 데이터 변경은 트랜잭션 안에서 실행해야 함
+//회원가입에만 쓸 거니 join에만 달아도 뭐 ㄱㅊ
 public class MemberService {
 
     private final MemberRepository memberRepository;
