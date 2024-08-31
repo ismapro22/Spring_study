@@ -1,5 +1,6 @@
 package hello.hello_spring;
 
+import hello.hello_spring.aop.TimeTraceAop;
 import hello.hello_spring.repository.JdbcMemberRepository;
 import hello.hello_spring.repository.JdbcTemplateMemberRepository;
 import hello.hello_spring.repository.JpaMemberRepository;
@@ -42,5 +43,10 @@ public class SpringConfig {
 //        return new JdbcTemplateMemberRepository(dataSource);//JPA 쓰게 지움
 //        return new JdbcMemberRepository(dataSource);//DB에 넣게 지움
 //        return new MemoryMemberRepository();
+//    }
+
+//    @Bean //이게 선호되는 방식이나 학습 목적으로 Component스캔 사용
+//    public TimeTraceAop timeTraceAop(){
+//        return new TimeTraceAop();
 //    }
 }
