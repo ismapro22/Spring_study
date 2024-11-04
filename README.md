@@ -21,7 +21,7 @@
 2. MariaDB
 3. Kubernetes
 4. MyBatis
-5. AWS
+5. AWS(진행중)
 6. 학습 중 추가하고 싶은 기능 추가(상시)
 
 ---
